@@ -1,0 +1,454 @@
+:root {
+    --bg-color: #f7f3ee;         /* لون خلفية الصفحة */
+    --vision-bg: #d2c5b3;        /* لون خلفية الـ Vision */
+    --footer-bg: #b6bfad;        /* لون خلفية الفوتر (الأخضر الفاتح) */
+    --text-color: #2c2c2c;       /* لون النصوص */
+     --bg-light: #F5F5DC;
+    --white: #FFFFFF;
+    --gray-light: #E0E0E0;
+    --olive: #6B8E23;
+    --text-dark: #333333;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color:var(--olive);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--olive); /* اسم الموقع باللون الزيتوني */
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark); /* الروابط باللون الأسود */
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--olive); /* تأثير الهافر باللون الزيتوني */
+}
+
+/* Icons & Search Section */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    width: 130px;
+    background: transparent;
+}
+
+.action-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--black);
+    transition: 0.3s;
+}
+
+.icon:hover {
+    color: var(--olive);
+}
+
+.cart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: var(--olive);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.nav-links a.active {
+    color: var(--olive) !important;
+    border-bottom: 2px solid var(--olive); /* خط زيتوني أسفل الكلمة */
+    padding-bottom: 5px;
+}
+
+
+
+
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    font-style: italic;
+    color: #4b4b3c;
+}
+
+/* الإحصائيات */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.stat-item h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 0.8rem;
+    color:var(--text-color);
+    letter-spacing: 1px;
+}
+
+/* قسم المجموعة */
+.collection {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.collection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.show-more {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* شبكة المنتجات */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* تقسيم الصفحة لجزئين */
+    gap: 30px;
+}
+
+.main-product img {
+    width: 100%;
+    height: auto;
+}
+
+.side-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* صورتين في كل صف */
+    gap: 20px;
+}
+
+.sub-product img {
+    width: 100%;
+    height: auto;
+    background-color: #e9e9e9;
+}
+
+/* تفاصيل المنتج */
+.product-info h4, .sub-product h4 {
+    margin: 10px 0 2px 0;
+    font-size: 1rem;
+}
+
+.product-info p, .sub-product p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* العناوين الجانبية */
+.section-label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    display: block;
+    margin-bottom: 30px;
+}
+
+/* الهيدر العلوي للسيكشن */
+.hero-header, .collection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.show-more, .shop-now {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.show-more:hover, .shop-now:hover {
+    color: var(--olive);
+}
+
+/* Toggle Home/Workspace */
+.toggle-container {
+    background: var(--gray-light);
+    padding: 4px;
+    display: flex;
+    border-radius: 2px;
+}
+.toggle-btn {
+    padding: 6px 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.toggle-btn.active {
+    background: var(--black);
+    color: var(--footer-bg);
+}
+
+/* Grid Layout Section 1 */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr 200px;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.thumb-placeholder {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--gray-light);
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    text-align: center;
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* قائمة التصنيفات */
+.category-list {
+    list-style: none;
+    text-align: right;
+}
+
+.category-list li {
+    font-size: 1.8rem;
+    color: #CCC; /* رمادي فاتح للغير محدد */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-list li:hover, .category-list li.active {
+    color: var(--black);
+}
+
+/* Section 2: Payment & Delivery */
+.info-section {
+    margin-bottom: 120px;
+}
+
+.info-content {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.info-image {
+    flex: 1;
+    background-color: var(--gray-light);
+    aspect-ratio: 1/1;
+}
+
+.info-image img, .thumb-placeholder img, .product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-text {
+    flex: 1.2;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.info-number {
+    color: var(--black);
+    font-weight: 500;
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+.info-item p {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+}
+
+/* Section 3: Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-img-box {
+    background-color: var(--gray-light);
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .thumbnails {
+        flex-direction: row;
+        order: 2;
+    }
+    .category-list {
+        order: 1;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .info-content {
+        flex-direction: column;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* --- تعديلات الهوفر للسيكشن --- */
+
+.product-img-box {
+    position: relative; /* ضروري لتحديد مكان الـ overlay */
+    overflow: hidden; /* لمنع الصورة من الخروج عن الحدود عند تكبيرها */
+    cursor: pointer;
+}
+
+/* الطبقة الخضراء الشفافة */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 77, 51, 0.7); /* اللون الزيتوني الخاص بـ CozySpace */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* مخفية في البداية */
+    transition: opacity 0.4s ease; /* حركة ناعمة للظهور */
+}
+
+/* النص الأبيض داخل الهوفر */
+.overlay span {
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-transform: lowercase;
+    border-bottom: 1px solid var(--white); /* خط بسيط تحت الكلمة */
+    padding-bottom: 2px;
+}
+
+/* تأثير الحركة عند الهوفر */
+.product-card:hover .overlay {
+    opacity: 1; /* إظهار الطبقة الخضراء */
+}
+
+.product-card:hover .product-img-box img {
+    transform: scale(1.08); /* تكبير بسيط جداً للصورة لزيادة التفاعل */
+}
+
+/* حركة انسيابية للصورة */
+.product-img-box img {
+    transition: transform 0.5s ease;
+}
