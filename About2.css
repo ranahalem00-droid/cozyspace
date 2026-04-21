@@ -285,3 +285,100 @@ body {
 .footer p{
     font-size: 20px;
 }
+/* --- التعديلات الخاصة بالتجاوب (Responsive) لصفحة About --- */
+
+@media (max-width: 1024px) {
+    .hero-section, .item-card, .footer {
+        width: 95%; /* توسيع الحاويات قليلاً على الشاشات المتوسطة */
+    }
+    
+    .hero-text h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-links {
+        display: none; /* إخفاء الروابط كما في الصفحة الرئيسية */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: auto; /* السماح للمحتوى بتحديد الارتفاع */
+        padding: 40px 5%;
+    }
+
+    .hero-banner img {
+        height: 300px; /* تقليل ارتفاع الصورة في الموبايل */
+    }
+
+    .hero-text h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    /* Cards (Craftsmanship & Sustainability) */
+    .card-body {
+        flex-direction: column; /* ترتيب الصورة فوق النص */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .card-body img, .card-body .treeclass {
+        width: 100%; /* الصورة تأخذ العرض الكامل */
+        max-width: 400px;
+    }
+
+    .text-content p {
+        font-size: 20px;
+    }
+
+    .icons-container {
+        justify-content: center; /* سنترة الأيقونات */
+        gap: 20px;
+    }
+
+    /* Footer */
+    .footer-box {
+        flex-direction: column; /* ترتيب صورة الفوتر فوق النص */
+        text-align: center;
+    }
+
+    .footer-box img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .footer h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1, .item-card h2, .footer h2 {
+        font-size: 22px; /* تصغير العناوين الجانبية */
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .icons-container {
+        flex-direction: row; /* الحفاظ على الأيقونات بجانب بعضها لكن بحجم أصغر */
+        flex-wrap: wrap;
+    }
+
+    .icon-group {
+        width: 100px;
+    }
+
+    .icon-group img {
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -178,12 +178,75 @@ body {
     letter-spacing: 1px;
 }
 
-/* Responsive */
+/* --- (Responsive) --- */
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 4%; /* تقليل الهوامش الجانبية قليلاً */
+    }
+    
+    .nav-links {
+        gap: 15px; /* تقليل المسافات بين الروابط */
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+}
+
 @media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-wrap: wrap; /* السماح للعناصر بالنزول لسطر جديد إذا ضاقت الشاشة */
+        padding: 10px 5%;
+    }
+
+    .nav-links {
+        display: none; /* إخفاء الروابط في الموبايل (يمكنك إضافة Menu Icon لاحقاً) */
+    }
+
+    .nav-icons {
+        gap: 15px;
+    }
+
+    .search-box input {
+        width: 100px; /* تصغير حقل البحث */
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 70vh; /* تقليل ارتفاع الـ Hero في الموبايل */
+    }
+
     .hero-content h1 {
         font-size: 3rem;
+        letter-spacing: 2px;
     }
-    .nav-links {
-        display: none; 
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .search-box {
+        display: none; /* إخفاء البحث في الشاشات الصغيرة جداً لتوفير مساحة */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .nav-icons {
+        gap: 10px;
     }
 }

@@ -452,3 +452,125 @@ body {
 .product-img-box img {
     transition: transform 0.5s ease;
 }
+/* --- التعديلات الخاصة بالتجاوب (Responsive) لصفحة Collection --- */
+
+@media (max-width: 1024px) {
+    .container, .collection {
+        padding: 0 20px;
+    }
+    
+    .hero-grid {
+        gap: 30px;
+        grid-template-columns: 100px 1fr 150px; /* تضييق الأعمدة الجانبية */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-links {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 1.8rem;
+        padding: 0 10px;
+    }
+
+    .stats {
+        gap: 30px; /* تقليل المسافات بين الإحصائيات */
+        flex-wrap: wrap;
+    }
+
+    .stat-item h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Product Grid (القسم العلوي) */
+    .product-grid {
+        grid-template-columns: 1fr; /* جعل المنتجات تحت بعضها */
+    }
+
+    .side-products {
+        grid-template-columns: 1fr 1fr; /* بقاء الصور الجانبية 2 في كل صف */
+    }
+
+    /* Hero Grid (القسم الأوسط مع التصنيفات) */
+    .hero-grid {
+        grid-template-columns: 1fr; /* تحويل الشبكة لعمود واحد */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .thumbnails {
+        flex-direction: row; /* جعل الصور الصغيرة أفقية تحت بعضها */
+        justify-content: center;
+        order: 2;
+    }
+
+    .thumb-placeholder {
+        width: 80px;
+    }
+
+    .main-image {
+        order: 1;
+    }
+
+    .category-list {
+        order: 3;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .category-list li {
+        font-size: 1.2rem;
+    }
+
+    /* Info Section (Payment & Delivery) */
+    .info-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .info-text {
+        width: 100%;
+    }
+
+    /* Full Collection Grid (القسم السفلي) */
+    .collection-section .product-grid {
+        grid-template-columns: 1fr 1fr; /* عرض منتجين بجانب بعضهما في الموبايل */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .side-products {
+        grid-template-columns: 1fr; /* صورة واحدة فقط في الصف في الشاشات الصغيرة جداً */
+    }
+
+    .section-label {
+        font-size: 1.1rem;
+    }
+
+    .collection-section .product-grid {
+        grid-template-columns: 1fr; /* منتج واحد في الصف */
+    }
+    
+    .header-right {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+    }
+}

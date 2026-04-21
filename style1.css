@@ -264,3 +264,77 @@ button {
     background: #f0f0f0;
 
 }
+/* --- التعديلات الخاصة بالتجاوب (Responsive) لصفحة Catalog --- */
+
+@media (max-width: 1024px) {
+    .categories {
+        grid-template-columns: repeat(3, 1fr); /* عرض 3 تصنيفات في الصف بدلاً من 5 */
+        justify-content: center;
+    }
+    
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* عرض منتجين فقط في الصف */
+    }
+
+    /* إلغاء تمدد الكروت الكبيرة لتناسب النظام الجديد (2 في الصف) */
+    .card1, .card2, .card7, .card8 {
+        grid-column: span 2; 
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* إخفاء القائمة العلوية كما في باقي الصفحات */
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr); /* تصنيفين في الصف */
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .products {
+        grid-template-columns: 1fr; /* عرض منتج واحد فقط في الصف لراحة العين */
+        gap: 20px;
+    }
+
+    /* جعل كل الكروت تأخذ العرض الكامل في الموبايل */
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12 {
+        grid-column: span 1;
+    }
+
+    .card img {
+        height: 250px; /* توحيد ارتفاع الصور في الموبايل */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .search-box {
+        display: none; /* توفير مساحة في الشاشات الصغيرة جداً */
+    }
+
+    .categories {
+        grid-template-columns: 1fr; /* كل تصنيف في سطر وحده أو يمكن جعلها Flex */
+        display: flex;
+        overflow-x: auto; /* السماح بالتمرير الأفقي للتصنيفات */
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+
+    .categories div {
+        flex: 0 0 auto;
+        padding: 5px 15px;
+    }
+
+    .pagination {
+        font-size: 12px;
+    }
+
+    .button {
+        width: 150px; /* تصغير الزر قليلاً */
+    }
+}
